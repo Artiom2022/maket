@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./adaptive_style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link 
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" 
         rel="stylesheet">
-        />
 
     <title>Document</title>
 </head>
@@ -20,6 +20,24 @@
     <img src="./Assets/bg_img_3.png" alt="error" class="bg_gradient" />
     <img src="./Assets/bg_img_4.png" alt="error" class="bg_gradient" />
     <div class="container">
+        <!-- burger start -->
+        <div class="burger-menu">
+            <div class="burger-menu__content">
+                <img src="./Assets/cancel_btn.png" alt="" class="burger-menu__btn_close">
+                <input type="" class="burger-menu__input">
+
+                <ul class="burger-menu__list">
+                    <li class="burger-menu__item"><a href="#">Home</a></li>
+                    <li class="burger-menu__item"><a href="#">Services</a></li>
+                    <li class="burger-menu__item"><a href="#">Our Project</a></li>
+                    <li class="burger-menu__item"><a href="#">About Us</a></li>
+
+            </div>
+
+        </div>
+
+        <!-- burger end -->
+
         <!-- navbar start -->
         <div class="navbar">
             <img src="./Assets/Logo.svg" alt="" class="navbar__logo"/>
@@ -30,6 +48,7 @@
                 <li class="list__item"><a href="#">About Us</a></li>
             </ul>
             <input type="text" class="navbar__input"/>
+            <img src="./Assets/navbar_btn.png" alt="" class="navbar__btn_burger">
         </div>
         <!-- navbar end -->
 
@@ -55,6 +74,7 @@
                 class="vector"
                 id="vector_1"
                 />
+                <!-- Vectors -->
                 <img 
                 src="./Assets/vector_2.png" 
                 alt="" 
@@ -111,9 +131,7 @@
                 <p class="services__desc">Create a platform with the best and coolest quality from us.</p>
             </li>
 
-                </li>
-
-
+                </li>   
                 
 
             </ul>
@@ -154,9 +172,9 @@
 
             <div class="info__block">
                 <h2 class="info__block_title">
+
                     Contact us for the service you want to use
-                </h2>
-                <button class="info__block_btn">Contact us</button>
+                </h2><button class="info__block_btn">Contact us</button>
                 </div>
 
                 <!-- info block end -->
@@ -186,5 +204,19 @@
 
         </div>
     </div>
+
+    <script>
+        let openBtn = document.querySelector('.navbar__btn_burger');
+        let closeBtn = document.querySelector('.burger-menu__btn_close');
+        let burgerMenu = document.querySelector('.burger-menu');
+
+        openBtn.addEventListener('click', () => {
+            burgerMenu.style.display = 'block';
+        })
+
+        closeBtn.addEventListener('click', () => {
+            burgerMenu.style.display = 'none';
+        })
+    </script>
 </body>
 </html>
